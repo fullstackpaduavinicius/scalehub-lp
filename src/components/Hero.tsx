@@ -1,7 +1,7 @@
 import {
   ArrowRight,
   BarChart3,
-  CheckCircle2,
+  
   MessageCircle,
   MousePointerClick,
   Target,
