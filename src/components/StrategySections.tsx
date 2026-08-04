@@ -4,7 +4,6 @@ import {
   Activity,
   BarChart3,
   CheckCircle2,
-  CircleDollarSign,
   Crosshair,
   Gauge,
   Megaphone,
