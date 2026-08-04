@@ -1,43 +1,50 @@
-import { FaqSection } from "./components/FaqSection";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { LeadForm } from "./components/LeadForm";
-import { FixedActions } from "./components/FixedActions";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import LeadForm from "./components/LeadForm";
+import FaqSection from "./components/FaqSection";
+import Footer from "./components/Footer";
+import FixedActions from "./components/FixedActions";
 
 import {
   AudienceSection,
-  MeasurementSection,
+  InvestmentSection,
   MethodSection,
+  OfferSection,
   ProblemSection,
   ProcessSection,
-  StructureSection,
+  TrustBar,
 } from "./components/StrategySections";
 
-import { usePageTracking } from "./hooks/usePageTracking";
-
 function App() {
-  usePageTracking();
-
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#05080d]">
+    <div className="min-h-screen overflow-x-hidden bg-[#05080d] text-white">
       <Header />
 
       <main>
         <Hero />
+
+        <TrustBar />
+
         <ProblemSection />
+
+        <OfferSection />
+
         <MethodSection />
-        <StructureSection />
+
         <AudienceSection />
-        <MeasurementSection />
+
+        <InvestmentSection />
+
         <ProcessSection />
+
         <LeadForm />
+
         <FaqSection />
       </main>
 
       <Footer />
 
-       <FixedActions />
+      <FixedActions />
     </div>
   );
 }

@@ -16,7 +16,7 @@ const googleFormEmbedUrl =
 const googleFormDirectUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSeHgEPEnO9JQmyc1BWw_lMXJr81t0MP0k0dlzDq-ILayRl4Ww/viewform";
 
-export function LeadForm() {
+export default function LeadForm() {
   const hasTrackedLoad = useRef(false);
 
   function handleIframeLoad() {

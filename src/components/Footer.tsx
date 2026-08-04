@@ -1,52 +1,92 @@
-import { ArrowRight } from "lucide-react";
+import { BarChart3, Mail, MessageCircle } from "lucide-react";
 
-import { CtaLink } from "./CtaLink";
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
 
-export function Footer() {
   return (
-    <footer className="border-t border-white/10">
-      <div className="page-container py-16">
-        <div className="rounded-3xl border border-cyan-400/20 bg-cyan-400/[0.04] p-7 text-center sm:p-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">
-            Próxima decisão
+    <footer className="border-t border-white/10 bg-[#030509] px-5 pb-28 pt-12 lg:px-8 lg:pb-12">
+      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
+        <div>
+          <img
+            src="/logo-scalehub.png"
+            alt="Scale Hub"
+            className="h-11 w-auto object-contain"
+          />
+
+          <p className="mt-5 max-w-sm text-sm leading-6 text-slate-500">
+            Estratégia, tráfego pago e análise de dados para negócios que
+            desejam transformar anúncios em oportunidades comerciais.
           </p>
-
-          <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
-            Sua empresa não precisa apenas anunciar mais.
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-            Precisa entender o que anunciar, para quem e como
-            transformar o investimento em oportunidades.
-          </p>
-
-          <CtaLink
-            href="#diagnostico"
-            trackingName="analise_captacao"
-            trackingPosition="footer"
-            className="mt-8"
-          >
-            Quero analisar minha captação
-            <ArrowRight size={18} />
-          </CtaLink>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-sm text-slate-500 sm:flex-row">
-          <div className="flex items-center gap-3">
-            <img
-              src="/logo-scalehub.png"
-              alt=""
-              className="h-8 w-8 object-contain"
-            />
+        <div>
+          <h3 className="text-sm font-black uppercase tracking-[0.16em] text-white">
+            Navegação
+          </h3>
 
-            <span>Scale Hub</span>
+          <div className="mt-5 flex flex-col gap-3 text-sm text-slate-500">
+            <a href="#problema" className="transition hover:text-cyan-300">
+              O problema
+            </a>
+
+            <a href="#solucao" className="transition hover:text-cyan-300">
+              Como ajudamos
+            </a>
+
+            <a href="#metodo" className="transition hover:text-cyan-300">
+              Método P.A.C.
+            </a>
+
+            <a href="#investimento" className="transition hover:text-cyan-300">
+              Investimento
+            </a>
+
+            <a href="#diagnostico" className="transition hover:text-cyan-300">
+              Solicitar análise
+            </a>
           </div>
-
-          <p>
-            © {new Date().getFullYear()} Scale Hub. Todos os
-            direitos reservados.
-          </p>
         </div>
+
+        <div>
+          <h3 className="text-sm font-black uppercase tracking-[0.16em] text-white">
+            Nosso compromisso
+          </h3>
+
+          <div className="mt-5 space-y-4">
+            <div className="flex items-start gap-3 text-sm leading-6 text-slate-500">
+              <BarChart3
+                size={18}
+                className="mt-0.5 shrink-0 text-cyan-300"
+              />
+
+              <span>Decisões orientadas por dados.</span>
+            </div>
+
+            <div className="flex items-start gap-3 text-sm leading-6 text-slate-500">
+              <MessageCircle
+                size={18}
+                className="mt-0.5 shrink-0 text-cyan-300"
+              />
+
+              <span>Atendimento e acompanhamento direto.</span>
+            </div>
+
+            <div className="flex items-start gap-3 text-sm leading-6 text-slate-500">
+              <Mail
+                size={18}
+                className="mt-0.5 shrink-0 text-cyan-300"
+              />
+
+              <span>Comunicação clara durante toda a campanha.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-7 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+        <p>© {currentYear} Scale Hub. Todos os direitos reservados.</p>
+
+        <p>Tráfego pago, estratégia e mensuração.</p>
       </div>
     </footer>
   );
