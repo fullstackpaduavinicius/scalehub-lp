@@ -1,10 +1,11 @@
 import { useRef } from "react";
 
 import {
-  CheckCircle2,
+  /* CheckCircle2, */
   ExternalLink,
-  FileText,
-  ShieldCheck,
+  
+  /* FileText, */
+  /* ShieldCheck, */
 } from "lucide-react";
 
 import { trackEvent } from "../lib/analytics";
@@ -56,14 +57,14 @@ export default function LeadForm() {
             Descubra onde sua captação pode estar travando.
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-slate-400">
+          {/* <p className="mt-5 text-lg leading-8 text-slate-400">
             Responda algumas perguntas para entendermos o
             momento atual da sua empresa e verificarmos qual
             estrutura faz sentido para sua necessidade.
-          </p>
+          </p> */}
         </div>
 
-        <div className="mx-auto mb-8 grid max-w-4xl gap-4 sm:grid-cols-3">
+        {/* <div className="mx-auto mb-8 grid max-w-4xl gap-4 sm:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-5 text-center">
             <FileText
               size={22}
@@ -108,7 +109,7 @@ export default function LeadForm() {
               Entraremos em contato caso exista compatibilidade.
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div className="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-cyan-400/20 bg-[#f5f7fb] shadow-2xl shadow-black/30">
           <div className="border-b border-slate-200 bg-white px-5 py-4 text-center">

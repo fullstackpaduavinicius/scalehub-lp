@@ -11,7 +11,7 @@ import {
   MousePointerClick,
   Search,
   Settings2,
-  ShieldCheck,
+  
   Sparkles,
   Target,
   TrendingUp,
@@ -216,11 +216,11 @@ export function OfferSection() {
             <SectionTitle
               eyebrow="A solução"
               title="O que a Scale Hub faz pela sua empresa"
-              description="Criamos uma estrutura simples de aquisição para atrair pessoas, gerar conversas e melhorar os resultados com base no que os dados mostram."
+              description="Criamos uma estrutura completa de aquisição para atrair pessoas, gerar conversas e melhorar os resultados com base no que os dados mostram."
               align="left"
             />
 
-            <div className="mt-7 rounded-2xl border border-amber-300/20 bg-amber-300/5 p-5">
+            {/* <div className="mt-7 rounded-2xl border border-amber-300/20 bg-amber-300/5 p-5">
               <div className="flex items-start gap-3">
                 <ShieldCheck
                   size={21}
@@ -233,7 +233,7 @@ export function OfferSection() {
                   melhoria contínua.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">
@@ -314,7 +314,7 @@ export function OfferSection() {
                 </span>
 
                 <h3 className="mt-1 text-xl font-black text-white">
-                  Estratégia conduzida por Ivan Pádua
+                  Estratégia conduzida por Pádua Vinicius
                 </h3>
 
                 <p className="mt-2 text-sm leading-6 text-slate-400">
@@ -426,12 +426,12 @@ export function MethodSection() {
           })}
         </div>
 
-        <div className="mt-7 rounded-2xl border border-rose-400/20 bg-rose-400/5 px-6 py-5 text-center">
+        {/* <div className="mt-7 rounded-2xl border border-rose-400/20 bg-rose-400/5 px-6 py-5 text-center">
           <p className="font-bold leading-7 text-white">
             Quando uma dessas etapas falha, aumentar o orçamento apenas aumenta
             o desperdício.
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -534,6 +534,13 @@ export function AudienceSection() {
    INVESTIMENTO
 ========================================================= */
 
+
+const WHATSAPP_NUMBER = "5579998807035";
+
+function createWhatsappLink(message: string) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
 export function InvestmentSection() {
   const plans = [
     {
@@ -564,7 +571,12 @@ export function InvestmentSection() {
         "Gestão completa de posicionamento orgânico",
         "Operação mensal de social media",
       ],
-      buttonText: "Quero estruturar minhas campanhas",
+      buttonText: "Tenho interesse no Scale Ads",
+      whatsappMessage: `Olá, Ivan! Tudo bem?
+
+Conheci a Scale Hub pelo site e tenho interesse no plano *Scale Ads*, no valor de *R$ 1.297,90*.
+
+Gostaria de entender se esse plano é adequado para o momento da minha empresa e como funciona a análise inicial.`,
     },
     {
       packageNumber: "Pacote 02",
@@ -590,7 +602,14 @@ export function InvestmentSection() {
         "Operação completa de social media",
         "Produção recorrente e edição mensal de vídeos",
       ],
-      buttonText: "Quero crescer com estratégia",
+      buttonText: "Tenho interesse no Scale Growth",
+      whatsappMessage: `Olá, Ivan! Tudo bem?
+
+Conheci a Scale Hub pelo site e tenho interesse no plano *Scale Growth*, no valor de *R$ 1.987,90*.
+
+Quero entender como a Scale Hub pode ajudar minha empresa a melhorar a geração de leads, a comunicação da oferta e a conversão.
+
+Gostaria de solicitar uma análise inicial.`,
     },
     {
       packageNumber: "Pacote 03",
@@ -617,7 +636,14 @@ export function InvestmentSection() {
         "Cobertura presencial de eventos e atividades",
         "Produções audiovisuais fora do planejamento mensal",
       ],
-      buttonText: "Quero tráfego e conteúdo integrados",
+      buttonText: "Tenho interesse no Growth Plus",
+      whatsappMessage: `Olá, Ivan! Tudo bem?
+
+Conheci a Scale Hub pelo site e tenho interesse no plano *Scale Growth Plus*, no valor de *R$ 2.777,80*.
+
+Busco uma solução que integre tráfego pago, posicionamento, conversão e produção recorrente de conteúdo.
+
+Gostaria de entender se esse é o plano mais adequado para minha empresa.`,
     },
   ];
 
@@ -630,7 +656,6 @@ export function InvestmentSection() {
         <SectionTitle
           eyebrow="Planos Scale Hub"
           title="Escolha o nível de estrutura que sua empresa precisa"
-          description="Os planos evoluem conforme a necessidade do negócio: começando pela estrutura de aquisição, avançando para a conversão e chegando à integração entre tráfego, posicionamento e conteúdo."
         />
 
         <div className="mt-5 text-center">
@@ -790,8 +815,10 @@ export function InvestmentSection() {
 
                   <div className="mt-auto pt-7">
                     <a
-                      href="#diagnostico"
-                      aria-label={`Solicitar análise para o plano ${plan.name}`}
+                      href={createWhatsappLink(plan.whatsappMessage)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Conversar pelo WhatsApp sobre o plano ${plan.name}`}
                       className={`inline-flex min-h-14 w-full items-center justify-center rounded-xl px-5 py-4 text-center text-sm font-black transition ${
                         plan.recommended
                           ? "bg-fuchsia-500 text-white hover:bg-fuchsia-400"
@@ -806,9 +833,14 @@ export function InvestmentSection() {
             );
           })}
         </div>
+      </div>
+    </section>
+  );
+}
+        /* </div>
 
-        <div className="mx-auto mt-8 max-w-5xl rounded-2xl border border-white/10 bg-white/[0.025] p-5">
-          <div className="flex items-start gap-3">
+         {/* <div className="mx-auto mt-8 max-w-5xl rounded-2xl border border-white/10 bg-white/[0.025] p-5">
+          <div className="flex items-start gap-3"> 
             <ShieldCheck
               size={20}
               className="mt-0.5 shrink-0 text-cyan-300"
@@ -827,18 +859,18 @@ export function InvestmentSection() {
             </div>
           </div>
         </div>
-
-        <div className="mx-auto mt-5 max-w-5xl rounded-2xl border border-amber-300/20 bg-amber-300/5 p-5">
+ 
+         <div className="mx-auto mt-5 max-w-5xl rounded-2xl border border-amber-300/20 bg-amber-300/5 p-5">
           <p className="text-xs leading-5 text-slate-400">
             No Scale Growth Plus, os conteúdos serão produzidos após a aprovação
             do planejamento. A publicação dos materiais pela equipe pode ser
             contratada separadamente.
           </p>
-        </div>
+        </div> 
       </div>
     </section>
   );
-}
+} 
 /* =========================================================
    PROCESSO
 ========================================================= */

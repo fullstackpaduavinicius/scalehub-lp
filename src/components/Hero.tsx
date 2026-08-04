@@ -1,9 +1,7 @@
 import {
   ArrowRight,
-  BarChart3,
   CheckCircle2,
-  MessageCircle,
-  Target,
+  /* Target, */
 } from "lucide-react";
 
 const benefits = [
@@ -12,7 +10,7 @@ const benefits = [
   "Decisões baseadas em dados, não em achismo",
 ];
 
-const structureItems = [
+/* const structureItems = [
   {
     icon: Target,
     title: "Estratégia",
@@ -28,7 +26,7 @@ const structureItems = [
     title: "Mensuração",
     description: "Acompanhamento para orientar os próximos testes.",
   },
-];
+]; */
 
 export default function Hero() {
   return (
@@ -46,8 +44,7 @@ export default function Hero() {
 
           <h1 className="max-w-3xl text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
             Transforme anúncios em{" "}
-            <span className="text-cyan-300">conversas reais</span> com pessoas
-            interessadas no que sua empresa oferece.
+            <span className="text-cyan-300">clientes reais</span> 
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
@@ -92,59 +89,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-8 -z-10 rounded-full bg-cyan-400/10 blur-3xl" />
-
-          <div className="rounded-3xl border border-white/10 bg-[#0a1018] p-5 shadow-2xl shadow-black/30 sm:p-7">
-            <div className="mb-7 flex items-center justify-between gap-4">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">
-                  Antes de anunciar
-                </span>
-
-                <h2 className="mt-2 text-2xl font-bold text-white">
-                  Sua estrutura está pronta?
-                </h2>
-              </div>
-
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
-                <Target size={24} />
-              </div>
-            </div>
-
-            <div className="space-y-3">
-              {structureItems.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <div
-                    key={item.title}
-                    className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4"
-                  >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
-                      <Icon size={19} />
-                    </div>
-
-                    <div>
-                      <h3 className="font-bold text-white">{item.title}</h3>
-
-                      <p className="mt-1 text-sm leading-6 text-slate-400">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="mt-5 rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-4">
-              <p className="text-sm leading-6 text-slate-300">
-                Antes de aumentar seu investimento, analisamos onde está o
-                verdadeiro gargalo da sua operação comercial.
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
